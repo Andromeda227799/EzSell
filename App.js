@@ -16,27 +16,63 @@ import ListingEditScreen from "./app/screens/ListingEditScreen";
 export default function App() {
   const [text, setText] = useState("");
   const [category, setCategory] = useState();
+
   const pickerItems = [
     {
-      id: 1,
-      title: "Couch",
-      Price: "$1100",
-      image: require("./app/assets/couch.jpg"),
+      label: "Furniture",
+      value: 1,
+      backgroundColor: "#fc5c65",
+      icon: "floor-lamp",
     },
     {
-      id: 2,
-      title: "Jacket",
-      Price: "$100",
-      image: require("./app/assets/jacket.jpg"),
+      label: "Cars",
+      value: 2,
+      backgroundColor: "#fd9644",
+      icon: "car",
     },
     {
-      id: 3,
-      title: "Chair",
-      Price: "$30",
-      image: require("./app/assets/chair.jpg"),
+      label: "Cameras",
+      value: 3,
+      backgroundColor: "#fed330",
+      icon: "camera",
+    },
+    {
+      label: "Games",
+      value: 4,
+      backgroundColor: "#26de81",
+      icon: "cards",
+    },
+    {
+      label: "Clothing",
+      value: 5,
+      backgroundColor: "#2bcbba",
+      icon: "shoe-heel",
+    },
+    {
+      label: "Sports",
+      value: 6,
+      backgroundColor: "#45aaf2",
+      icon: "basketball",
+    },
+    {
+      label: "Movies & Music",
+      value: 7,
+      backgroundColor: "#4b7bec",
+      icon: "headphones",
+    },
+    {
+      label: "Books",
+      value: 8,
+      backgroundColor: "#ce7aff",
+      icon: "book-open-variant",
+    },
+    {
+      label: "Others",
+      value: 9,
+      backgroundColor: "grey",
+      icon: "dots-horizontal",
     },
   ];
-
   return (
     <SafeScreen>
       {/* <AppPicker
@@ -47,6 +83,7 @@ export default function App() {
         placeholder="Category"
         setText={setText}
       /> */}
+      {/* <MyAccountScreen></MyAccountScreen> */}
       <ListingEditScreen pickerItems={pickerItems}></ListingEditScreen>
       {/* <MessegesScreen></MessegesScreen> */}
       {/* <LoginScreen></LoginScreen> */}

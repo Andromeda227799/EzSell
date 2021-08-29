@@ -9,6 +9,7 @@ import {
 } from "../components/forms";
 
 import * as Yup from "yup";
+import CategoryPickerItem from "../components/CategoryPickerItem";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),
@@ -52,8 +53,10 @@ function ListingEditScreen({
             width={180}
           />
           <AppFormPicker
+            PickerItemComponent={CategoryPickerItem}
             icon="widgets"
             name="category"
+            numColumns={3}
             categorySelected={categorySelected}
             onCategoryChange={onCategoryChange}
             pickerItems={pickerItems}
@@ -67,7 +70,7 @@ function ListingEditScreen({
           />
         </View>
         <View style={{ margin: 15, marginTop: 120 }}>
-          <SubmitButton title="Register"></SubmitButton>
+          <SubmitButton title="Post"></SubmitButton>
         </View>
       </AppForm>
     </SafeScreen>

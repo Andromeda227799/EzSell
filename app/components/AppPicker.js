@@ -18,9 +18,11 @@ function AppTextInput({
   icon,
   placeholder,
   setText,
+  PickerItemComponent = PickerItem,
   pickerItems,
   categorySelected,
   onCategoryChange,
+  numColumns = 1,
 }) {
   const [modalVisible, setModalVisible] = useState(false);
   return (
@@ -59,14 +61,15 @@ function AppTextInput({
         <Button title={"close"} onPress={() => setModalVisible(false)}></Button>
         <FlatList
           data={pickerItems}
-          keyExtractor={(pickerItems) => pickerItems.id.toString()}
+          keyExtractor={(pickerItems) => pickerItems.value.toString()}
+          numColumns={numColumns}
           renderItem={({ item }) => (
-            <PickerItem
+            <PickerItemComponent
               onPress={() => {
                 onCategoryChange(item);
                 setModalVisible(false);
               }}
-              item={item.title}
+              item={item}
             />
           )}
         ></FlatList>
