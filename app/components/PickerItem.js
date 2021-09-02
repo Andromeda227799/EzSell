@@ -5,6 +5,7 @@ import AppText from "./AppText";
 function PickerItem({ item, onPress }) {
   return (
     <TouchableOpacity onPress={onPress}>
+      {console.log("yaha aara")}
       <AppText style={styles.text}>{item.label}</AppText>
     </TouchableOpacity>
   );

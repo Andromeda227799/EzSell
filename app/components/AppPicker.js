@@ -7,6 +7,7 @@ import {
   Modal,
   Button,
   FlatList,
+  Platform,
 } from "react-native";
 import colors from "../config/colors";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -59,6 +60,7 @@ function AppTextInput({
       </TouchableWithoutFeedback>
       <Modal visible={modalVisible} animationType={"slide"}>
         <Button title={"close"} onPress={() => setModalVisible(false)}></Button>
+
         <FlatList
           data={pickerItems}
           keyExtractor={(pickerItems) => pickerItems.value.toString()}
@@ -66,6 +68,7 @@ function AppTextInput({
           renderItem={({ item }) => (
             <PickerItemComponent
               onPress={() => {
+                //console.log("press hora", item);
                 onCategoryChange(item);
                 setModalVisible(false);
               }}

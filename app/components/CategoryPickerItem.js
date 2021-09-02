@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, TouchableWithoutFeedback } from "react-native";
 import AppText from "./AppText";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../config/colors";
@@ -7,14 +7,18 @@ function CategoryPickerItem({ item, onPress }) {
   const iconColor = { backgroundColor: item.backgroundColor };
   return (
     <View style={styles.container}>
-      <View style={[styles.iconContainer, iconColor]}>
-        <MaterialCommunityIcons
-          name={item.icon}
-          size={50}
-          color={colors.white}
-        />
-      </View>
-      <AppText style={styles.label}>{item.label}</AppText>
+      <TouchableWithoutFeedback onPress={onPress}>
+        <View>
+          <View style={[styles.iconContainer, iconColor]}>
+            <MaterialCommunityIcons
+              name={item.icon}
+              size={50}
+              color={colors.white}
+            />
+          </View>
+          <AppText style={styles.label}>{item.label}</AppText>
+        </View>
+      </TouchableWithoutFeedback>
     </View>
   );
 }

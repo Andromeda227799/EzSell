@@ -8,4 +8,5 @@ export default {
   screen: "#f0f0f0",
   yellow: "#b3af39",
   lightGrey: "#858585",
+  lightBlue: "#abe9ff",
 };
