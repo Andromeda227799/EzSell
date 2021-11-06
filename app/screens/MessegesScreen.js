@@ -7,21 +7,21 @@ import ListItemDeleteIcon from "../components/ListItemDeleteIcon";
 const InitialMesseges = [
   {
     id: 1,
-    source: require("../assets/sam.jpg"),
-    title: "User 1",
-    subTitle: "Messeges from user 1",
+    source: require("../assets/user2.jpg"),
+    title: "Yash",
+    subTitle: "I am interseted in buying your ",
   },
   {
     id: 2,
-    source: require("../assets/mosh.jpg"),
-    title: "User 2",
-    subTitle: "Messeges from user 3333333333",
+    source: require("../assets/secUser.png"),
+    title: "Henry",
+    subTitle: "Any discounts??",
   },
   {
     id: 3,
-    source: require("../assets/mosh.jpg"),
-    title: "User 3",
-    subTitle: "Messeges from user 3",
+    source: require("../assets/sam.jpg"),
+    title: "Shamith",
+    subTitle: "Yes I have recieved the payments!",
   },
 ];
 
@@ -39,7 +39,7 @@ function MessegesScreen() {
           ...Messeges,
           {
             id: 1,
-            source: require("../assets/mosh.jpg"),
+            source: require("../assets/user2.jpg"),
             title: "User 1",
             subTitle: "Messeges from user 1",
           },

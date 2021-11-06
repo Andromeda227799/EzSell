@@ -23,7 +23,7 @@ function MyAccountScreen(props) {
       ></ListItem>
       <AccountInfoItems
         margin={{ marginTop: 45 }}
-        iconBackColor={{ backgroundColor: colors.red }}
+        iconBackColor={{ backgroundColor: colors.primary }}
         icon={"format-list-bulleted"}
         title="My Listings"
       ></AccountInfoItems>
@@ -34,7 +34,7 @@ function MyAccountScreen(props) {
       ></AccountInfoItems>
       <AccountInfoItems
         margin={{ marginTop: 25 }}
-        iconBackColor={{ backgroundColor: colors.yellow }}
+        iconBackColor={{ backgroundColor: colors.red }}
         icon={"logout"}
         title="Log Out"
       ></AccountInfoItems>
